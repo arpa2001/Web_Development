@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Books
+{% endblock %}
+
+{% block head %}
+
+  <style>
+
+    body{
+      text-align: center;
+      padding: 5%
+    }
+
+    h1{
+      padding: 5%
+    }
+
+    hr{
+      padding: 2%
+    }
+    table {
+        margin: 1%;
+        align-items: center;
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #aeeb34
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #699e00;
+    }
+
+  </style>
+
+{% endblock %}
+
+{% block body %}
+
+<h2>Select One by clicking on the Title of your choice</h2><hr>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+    </tr>
+    {% for book in books %}
+
+      <tr>
+          <td><a href="{{ url_for('adding', user_name = user_name, book_id = book.id) }}">{{ book.title }}</a></td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.year }}</td>
+      </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

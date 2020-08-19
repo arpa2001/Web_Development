@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Books
+{% endblock %}
+
+{% block head %}
+
+  <style>
+
+    body{
+      text-align: center;
+      padding: 5%
+    }
+
+    h1{
+      padding: 5%
+    }
+
+    hr{
+      padding: 2%
+    }
+    table {
+        margin: 1%;
+        align-items: center;
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #aeeb34
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #699e00;
+    }
+
+  </style>
+
+{% endblock %}
+
+{% block body %}
+{{ message }}
+<h1>Welcome {{ readers.cust_name }}</h1>
+
+<h2>You are presently reading</h2><hr>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>Ratings Count</th>
+        <th>Reviews Count</th>
+        <th>Text Reviews Count</th>
+        <th>Work Ratings Count</th>
+        <th>Work Reviews Count</th>
+        <th>Work Text Reviews Count</th>
+        <th>Average Rating</th>
+    </tr>
+    <tr>
+        <td>{{ readers.title }}</td>
+        <td>{{ readers.author }}</td>
+        <td>{{ readers.year }}</td>
+        <td>{{ ratings_count }}</td>
+        <td>{{ reviews_count }}</td>
+        <td>{{ text_reviews_count }}</td>
+        <td>{{ work_ratings_count }}</td>
+        <td>{{ work_reviews_count }}</td>
+        <td>{{ work_text_reviews_count }}</td>
+        <td>{{ average_rating }}</td>
+    </tr>
+</table>
+<br><hr><br>
+
+<form action="{{ url_for('books', user_name = readers.user_name) }}" method="post">
+  <button class="btn btn-primary">{{ action }}</button>
+</form>
+<br>
+<form action="{{ url_for('index') }}" method="post">
+  <button class="btn btn-primary">Log Out</button>
+</form>
+
+{% endblock %}
