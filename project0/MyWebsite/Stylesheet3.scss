@@ -1,0 +1,32 @@
+$color: red;
+$size: 20px;
+
+body{
+  padding: 2%;
+  background-color: #d8adff
+}
+
+.para{
+  color: blue;
+  font-size: $size;
+  font-weight: bold;
+  font-family: serif;
+  text-decoration: underline;
+}
+
+p{
+  color: $color;
+  font-size: $size;
+  font-family: monospace;
+}
+
+li{
+  color: $color;
+  font-size: $size;
+  font-family: sans-serif;
+}
+
+a {
+  padding: 5px;
+  background-color: white;
+}

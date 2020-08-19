@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lists</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <style>
+      @media screen and (min-width: 320px) and (max-width: 1200px){
+        body{
+			       background: #7ce7e1;
+             text-align: center;
+		    }
+        ol {
+          margin-left: inherit;
+          background-color: springgreen;
+        }
+        h1::before{
+          content: "This is a List";
+        }
+      }
+      @media screen and (min-width: 1200px){
+        body{
+		        background: #d8ff9d;
+		    }
+        h1::before{
+          content: "This is an Ordered and an Unordered List";
+        }
+      }
+      body {
+        padding: 5%
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      ol {
+        font-size: 30px;
+        color: blue;
+      }
+
+      ol li {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      ol > li {
+        color: red;
+      }
+
+      a {
+        text-align: right;
+        padding: 0.5%;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <ol id="list">
+      The list is:
+      <li class="item">First Item</li>
+      <li class="item">Second Item</li>
+      <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+      </ul>
+      <li class="item">Third Item</li>
+    </ol>
+    <br>
+    <hr>
+    <br>
+    <a href="Selector.html">Home</a>
+  </body>
+</html>

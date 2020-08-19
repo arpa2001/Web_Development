@@ -1,0 +1,26 @@
+body {
+  padding: 2%;
+  background-color: #d8adff; }
+
+.para {
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: serif;
+  text-decoration: underline; }
+
+p {
+  color: red;
+  font-size: 20px;
+  font-family: monospace; }
+
+li {
+  color: red;
+  font-size: 20px;
+  font-family: sans-serif; }
+
+a {
+  padding: 5px;
+  background-color: white; }
+
+/*# sourceMappingURL=Stylesheet3.css.map */
